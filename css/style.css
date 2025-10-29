@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: "VT323", monospace;
+}
+
+main {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+h1 {
+    font-size: 9vw;
+    white-space: nowrap;
+    font-weight: bold;
+    font-family: "VT323", monospace;
+    color: #39ff14;
+    text-shadow: 0 0 5px rgba(57, 255, 20, 0.8), 0 0 10px rgba(57, 255, 20, 0.8),
+        0 0 20px rgba(57, 255, 20, 0.6);
+    animation: neon-pulse 1.5s infinite alternate;
+}
+p {
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+
+.neon-btn {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #39ff14;
+    border: 2px solid #39ff14;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.neon-btn:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
+
+    .neon-btn {
+        font-size: 1.25rem;
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .neon-btn {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+}
+/* Cursor glow effect */
+.cursor-glow {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(57, 255, 20, 0.5);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Retro CRT effect */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+    background-size: 100% 4px;
+    z-index: 20;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/* Scanline effect */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.03);
+    z-index: 20;
+    pointer-events: none;
+    animation: flicker 0.15s infinite;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+/* Neon text effect */
+.text-neon-green {
+    text-shadow: 0 0 5px rgba(57, 255, 20, 0.8), 0 0 10px rgba(57, 255, 20, 0.8),
+        0 0 20px rgba(57, 255, 20, 0.6);
+    animation: neon-pulse 1.5s infinite alternate;
+}
+
+@keyframes neon-pulse {
+    from {
+        text-shadow: 0 0 5px rgba(57, 255, 20, 0.8), 0 0 10px rgba(57, 255, 20, 0.8),
+            0 0 20px rgba(57, 255, 20, 0.6);
+    }
+    to {
+        text-shadow: 0 0 10px rgba(57, 255, 20, 0.8), 0 0 20px rgba(57, 255, 20, 0.8),
+            0 0 30px rgba(57, 255, 20, 0.8), 0 0 40px rgba(57, 255, 20, 0.6);
+    }
+}
+
+/* Button effect */
+.neon-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    border-radius: 0.375rem;
+    background: linear-gradient(
+            90deg,
+            rgba(57, 255, 20, 0.1),
+            rgba(57, 255, 20, 0.3),
+            rgba(57, 255, 20, 0.1)
+        )
+        border-box;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+/* Glitch effect on hover */
+.neon-btn:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        transparent 45%,
+        rgba(57, 255, 20, 0.2) 45%,
+        rgba(57, 255, 20, 0.2) 55%,
+        transparent 55%
+    );
+    animation: glitch 0.5s linear infinite;
+}
+
+@keyframes glitch {
+    0% {
+        transform: translateX(-5px);
+    }
+    20% {
+        transform: translateX(5px);
+    }
+    40% {
+        transform: translateX(-5px);
+    }
+    60% {
+        transform: translateX(5px);
+    }
+    80% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+/* Particles container */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}

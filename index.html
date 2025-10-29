@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>404s to Mars!</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.18.11/dist/tsparticles.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        <script src="https://unpkg.com/feather-icons"></script>
+    </head>
+    <body>
+        <div id="particles-js"></div>
+
+        <main>
+            <div class="container">
+                <h1>404s to Mars!</h1>
+                <p>Houston, we have a problem... but the journey continues!</p>
+                <a href="#" class="neon-btn">Launch Again</a>
+            </div>
+        </main>
+
+        <script src="js/script.js"></script>
+        <script>
+            feather.replace();
+
+            // Particles.js config
+            particlesJS("particles-js", {
+                background: {
+                    color: "#000",
+                },
+                detectRetina: false,
+                fpsLimit: 30,
+                interactivity: {
+                    detectsOn: "canvas",
+                    events: {
+                        resize: true,
+                    },
+                },
+                particles: {
+                    color: {
+                        value: "#fff",
+                    },
+                    number: {
+                        density: {
+                            enable: true,
+                            area: 1080,
+                        },
+                        limit: 0,
+                        value: 400,
+                    },
+                    opacity: {
+                        animation: {
+                            enable: true,
+                            minimumValue: 0.05,
+                            speed: 0.25,
+                            sync: false,
+                        },
+                        random: {
+                            enable: true,
+                            minimumValue: 0.05,
+                        },
+                        value: 1,
+                    },
+                    shape: {
+                        type: "circle",
+                    },
+                    size: {
+                        random: {
+                            enable: true,
+                            minimumValue: 0.5,
+                        },
+                        value: 1,
+                    },
+                },
+            });
+        </script>
+    </body>
+</html>
