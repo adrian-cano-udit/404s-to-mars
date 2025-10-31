@@ -38,5 +38,5 @@ document.addEventListener("mousemove", (e) => {
         setTimeout(() => {
             cursorGlow.remove();
         }, 300);
-    }, 100);
+    }, 50);
 });

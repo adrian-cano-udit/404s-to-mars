@@ -67,7 +67,7 @@ p {
     position: relative;
     display: inline-block;
     padding: 1rem 2rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     color: var(--neon-green);
     border: 2px solid var(--neon-green);
@@ -80,42 +80,13 @@ p {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 768px) {
-    h1 {
-        font-size: 4rem;
-    }
-
-    p {
-        font-size: 1.25rem;
-    }
-
-    .neon-btn {
-        font-size: 1.25rem;
-        padding: 0.75rem 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 3rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
-    .neon-btn {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-    }
-}
 /* Cursor glow effect */
 .cursor-glow {
     position: absolute;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: rgba(57, 255, 20, 0.5);
+    background-color: rgba(57, 255, 20, 0.75);
     transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 9999;
@@ -248,4 +219,35 @@ body::after {
     width: 100%;
     height: 100%;
     z-index: 1;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
+
+    .neon-btn {
+        font-size: 1.25rem;
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .neon-btn {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
 }
