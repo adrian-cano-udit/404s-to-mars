@@ -63,6 +63,17 @@ p {
     opacity: 0.8;
 }
 
+.text-container {
+    display: none;
+    max-width: 800px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.text-container p {
+    font-size: 1.6rem;
+}
+
 .neon-btn {
     position: relative;
     display: inline-block;
