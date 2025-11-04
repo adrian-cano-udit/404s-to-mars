@@ -9,6 +9,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 18px;
 }
 
 body {
@@ -44,7 +45,7 @@ main {
 }
 
 h1 {
-    font-size: 9vw;
+    font-size: 10vw;
     white-space: nowrap;
     font-weight: bold;
     font-family: "VT323", monospace;
@@ -54,13 +55,30 @@ h1 {
     animation: neon-pulse 1.5s infinite alternate;
 }
 
+h3 {
+    font-size: 2rem;
+    color: var(--neon-green);
+    text-shadow: 0 0 5px var(--neon-green-glow), 0 0 10px var(--neon-green-glow),
+        0 0 20px rgba(57, 255, 20, 0.6);
+    animation: neon-pulse 1.5s infinite alternate;
+    margin-bottom: 0.4rem;
+}
+
 p {
     color: var(--neon-green);
     text-shadow: 0 0 5px var(--neon-green-glow), 0 0 10px var(--neon-green-glow),
         0 0 20px rgba(57, 255, 20, 0.6);
     animation: neon-pulse 1.5s infinite alternate;
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     opacity: 0.8;
+}
+
+a {
+    color: var(--neon-green);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    display: inline-block;
+    transition: color 0.3s ease;
 }
 
 .text-container {
@@ -70,8 +88,13 @@ p {
     line-height: 1.6;
 }
 
-.text-container p {
-    font-size: 1.6rem;
+.text-container p,
+.text-container b {
+    font-size: 1.25rem;
+}
+
+.inst {
+    margin-bottom: 0.8rem;
 }
 
 .neon-btn {
@@ -233,32 +256,9 @@ body::after {
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 4rem;
-    }
 
-    p {
-        font-size: 1.25rem;
-    }
-
-    .neon-btn {
-        font-size: 1.25rem;
-        padding: 0.75rem 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 3rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
-    .neon-btn {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
+@media (max-width: 512px) {
+    * {
+        font-size: 12px;
     }
 }
