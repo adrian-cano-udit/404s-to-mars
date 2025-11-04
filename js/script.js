@@ -27,6 +27,9 @@ $(document).ready(function () {
 // Toggle text container on button click
 $(".neon-btn").on("click", function () {
     $(".text-container").slideToggle();
+    $(this).text(function (i, text) {
+        return text === "Show instructions!" ? "Hide instructions!" : "Show instructions!";
+    });
 });
 
 // Add global cursor effect

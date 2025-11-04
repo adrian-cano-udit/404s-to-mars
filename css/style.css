@@ -16,7 +16,6 @@ body {
     background-color: black;
     color: white;
     min-height: 100vh;
-    overflow: hidden;
     margin: 0;
     padding: 0;
     font-family: "VT323", monospace;
@@ -30,7 +29,7 @@ main {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    padding: 0 1rem;
+    padding: 2rem 1rem;
     text-align: center;
 }
 
@@ -257,7 +256,7 @@ body::after {
 
 /* MEDIA QUERIES */
 
-@media (max-width: 512px) {
+@media (max-width: 720px) {
     * {
         font-size: 12px;
         line-height: 1.4;
