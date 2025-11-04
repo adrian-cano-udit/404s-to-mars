@@ -69,14 +69,14 @@ p {
     text-shadow: 0 0 5px var(--neon-green-glow), 0 0 10px var(--neon-green-glow),
         0 0 20px rgba(57, 255, 20, 0.6);
     animation: neon-pulse 1.5s infinite alternate;
-    font-size: 2.25rem;
+    font-size: 2rem;
     opacity: 0.8;
 }
 
 a {
     color: var(--neon-green);
-    font-size: 1.5rem;
-    margin-top: 1rem;
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
     display: inline-block;
     transition: color 0.3s ease;
 }
@@ -101,7 +101,7 @@ a {
     position: relative;
     display: inline-block;
     padding: 1rem 2rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: var(--neon-green);
     border: 2px solid var(--neon-green);
@@ -260,5 +260,13 @@ body::after {
 @media (max-width: 512px) {
     * {
         font-size: 12px;
+    }
+
+    h1 {
+        font-size: 12vw;
+    }
+
+    .container {
+        gap: 1rem;
     }
 }
