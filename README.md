@@ -4,7 +4,8 @@ See this web live -> https://adrian-cano-udit.github.io/404s-to-mars
 
 ## Mission Objective:
 
-Design and develop a **full responsive 404 error page** with a space theme: the planet **Mars** has vanished from the solar system. Your mission is to visually represent this cosmic event through design and effects.
+Major Tom was preparing to land on Mars when suddenly all systems went dark—only an error page remained: the planet **Mars** has vanished from the solar system. He was supposed to land in three
+minutes, but communications with Earth take ten. **Your crew must design and develop the full responsive error 404 page that appears aboard his computer ship.**
 
 ## Approved Technologies:
 
