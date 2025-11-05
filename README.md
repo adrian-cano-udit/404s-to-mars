@@ -27,3 +27,7 @@ Design and develop a **full responsive 404 error page** with a space theme: the 
 ## Launch Deadline:
 
 🕒 November 21, 2025, 23:59h.
+
+## Reward:
+
+🏆 Each member of the winning 5-person crew will receive a **Filmin streaming subscription.**
